@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import Main from "./main.jsx";
+import PlacesList from "./places-list.jsx";
 
 const mock = [
   {
@@ -24,8 +24,8 @@ const mock = [
   }
 ];
 
-it(`Main correctly renders`, () => {
-  const tree = renderer.create(<Main
+it(`PlacesList correctly renders`, () => {
+  const tree = renderer.create(<PlacesList
     offers = {mock}
   />).toJSON();
 

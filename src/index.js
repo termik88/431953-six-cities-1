@@ -1,11 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import Main from './components/main/main.jsx';
+import App from './components/app/app.jsx';
+import offers from './mocks/offers.js';
 
-ReactDOM.render(<Main
-  places = {[
-    {title: `Beautiful &amp; luxurious apartment at great location`},
-    {title: `Wood and stone place`},
-    {title: `Canal View Prinsengracht`},
-    {title: `Nice, cozy, warm big bed apartment`}]}/>, document.getElementById(`root`));
+ReactDOM.render(<App offers={offers} />, document.getElementById(`root`));
