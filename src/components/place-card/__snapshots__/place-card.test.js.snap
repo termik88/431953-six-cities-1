@@ -1,8 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Place correctly renders 1`] = `
+exports[`PlaceCard correctly renders 1`] = `
 <article
   className="cities__place-card place-card"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
 >
   <div
     className="place-card__mark"
@@ -21,7 +23,8 @@ exports[`Place correctly renders 1`] = `
         alt="Place image"
         className="place-card__image"
         height="200"
-        src="img/apartment-01.jpg"
+        onClick={[Function]}
+        src=""
         width="260"
       />
     </a>
@@ -38,7 +41,8 @@ exports[`Place correctly renders 1`] = `
         <b
           className="place-card__price-value"
         >
-          €120
+          €
+          120
         </b>
         <span
           className="place-card__price-text"
@@ -91,6 +95,7 @@ exports[`Place correctly renders 1`] = `
     >
       <a
         href="#"
+        onClick={[Function]}
       >
         Beautiful &amp; luxurious apartment at great location
       </a>

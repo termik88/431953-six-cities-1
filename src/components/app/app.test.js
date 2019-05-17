@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import Main from "./main.jsx";
+import App from "./app.jsx";
 
 const mock = [
   {
@@ -24,10 +24,11 @@ const mock = [
   }
 ];
 
-it(`Main correctly renders`, () => {
-  const tree = renderer.create(<Main
-    offers = {mock}
-  />).toJSON();
+it(`App correctly renders`, () => {
+  const test = renderer
+    .create(<App
+      offers = {mock}
+    />).toJSON();
 
-  expect(tree).toMatchSnapshot();
+  expect(test).toMatchSnapshot();
 });
