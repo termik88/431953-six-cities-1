@@ -2,24 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const PlaceCard = (props) => {
-  const {offer, onHover, offHover, onImageClick, onTitleClick} = props;
+  const {offer, onMouseEnter, onMouseLeave, onImageClick, onTitleClick} = props;
   const {id, premiumStatus, srcImage, price, rating, title, type} = offer;
 
-  const Premium = () => {
-    return (
-      <div className="place-card__mark">
-        <span>Premium</span>
-      </div>
-    );
-  };
-
   return (
-    <article className="cities__place-card place-card" onMouseEnter={() => onHover(id)} onMouseLeave={offHover}>
-      {
-        premiumStatus
-          ? <Premium/>
-          : null
-      }
+    <article className="cities__place-card place-card" onMouseEnter={() => onMouseEnter(id)} onMouseLeave={onMouseLeave}>
+      {premiumStatus && (
+        <div className="place-card__mark">
+          <span>Premium</span>
+        </div>
+      )}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
           <img
@@ -72,8 +64,8 @@ PlaceCard.propTypes = {
     title: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired
   }).isRequired,
-  onHover: PropTypes.func.isRequired,
-  offHover: PropTypes.func.isRequired,
+  onMouseEnter: PropTypes.func.isRequired,
+  onMouseLeave: PropTypes.func.isRequired,
   onImageClick: PropTypes.func.isRequired,
   onTitleClick: PropTypes.func.isRequired
 };

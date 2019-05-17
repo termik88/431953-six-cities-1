@@ -21,8 +21,8 @@ it(`Click on card title correctly works`, () => {
   const clickHandler = jest.fn();
   const placeCard = shallow(<PlaceCard
     offer = {mock}
-    onHover= {() => {}}
-    offHover={() => {}}
+    onMouseEnter= {() => {}}
+    onMouseLeave={() => {}}
     onImageClick={() => {}}
     onTitleClick={clickHandler}
   />);
@@ -36,8 +36,8 @@ it(`Click on card image correctly works`, () => {
   const clickHandler = jest.fn();
   const placeCard = shallow(<PlaceCard
     offer = {mock}
-    onHover= {() => {}}
-    offHover={() => {}}
+    onMouseEnter= {() => {}}
+    onMouseLeave={() => {}}
     onImageClick={clickHandler}
     onTitleClick={() => {}}
   />);

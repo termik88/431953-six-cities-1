@@ -17,8 +17,8 @@ it(`PlaceCard correctly renders`, () => {
 
   const tree = renderer.create(<PlaceCard
     offer = {mock}
-    onHover= {() => {}}
-    offHover={() => {}}
+    onMouseEnter= {() => {}}
+    onMouseLeave={() => {}}
     onImageClick={() => {}}
     onTitleClick={() => {}}
   />).toJSON();

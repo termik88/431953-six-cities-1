@@ -11,18 +11,18 @@ class PlaceList extends PureComponent {
       activeCard: null
     };
 
-    this._onHover = this._onHover.bind(this);
-    this._offHover = this._offHover.bind(this);
+    this._onMouseEnter = this._onMouseEnter.bind(this);
+    this._onMouseLeave = this._onMouseLeave.bind(this);
     this._onImageClick = this._onImageClick.bind(this);
   }
 
-  _onHover(value) {
+  _onMouseEnter(value) {
     this.setState({
       activeCard: value
     });
   }
 
-  _offHover() {
+  _onMouseLeave() {
     this.setState({
       activeCard: null
     });
@@ -42,8 +42,8 @@ class PlaceList extends PureComponent {
         {offers.map((it, i) => <PlaceCard
           key={i}
           offer={it}
-          onHover={this._onHover}
-          offHover={this._offHover}
+          onMouseEnter={this._onMouseEnter}
+          onMouseLeave={this._onMouseLeave}
           onImageClick={this._onImageClick}
           onTitleClick={() => {}}
         />)}
