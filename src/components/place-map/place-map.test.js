@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import PlacesList from "./places-list.jsx";
+import PlaceMap from "./place-map.jsx";
 
 const mock = [
   {
@@ -12,22 +12,12 @@ const mock = [
     rating: 93,
     title: `Beautiful &amp; luxurious apartment at great location`,
     type: `Apartment`,
-    coordinates: [52.3909553943508, 4.929309666406198]
-  },
-  {
-    id: 1,
-    premiumStatus: false,
-    srcImage: ``,
-    price: 80,
-    rating: 80,
-    title: `Wood and stone place`,
-    type: `Private room`,
-    coordinates: [52.3809553943508, 4.939309666406198]
+    coordinates: [52.369553943508, 4.85309666406198]
   }
 ];
 
 it(`PlacesList correctly renders`, () => {
-  const tree = renderer.create(<PlacesList
+  const tree = renderer.create(<PlaceMap
     offers = {mock}
   />).toJSON();
 

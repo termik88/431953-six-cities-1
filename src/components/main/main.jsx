@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import PlacesList from '../places-list/places-list.jsx';
+import PlaceMap from '../place-map/place-map.jsx';
 
 const Main = (props) => {
   const {offers} = props;
@@ -77,7 +78,9 @@ const Main = (props) => {
 
           </section>
           <div className="cities__right-section">
-            <section className="cities__map map"/>
+
+            <PlaceMap offers={offers}/>
+
           </div>
         </div>
       </div>
@@ -96,7 +99,8 @@ Main.propTypes = {
     price: PropTypes.number.isRequired,
     rating: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired,
+    coordinates: PropTypes.arrayOf(PropTypes.number).isRequired
   }).isRequired
   ).isRequired
 };

@@ -11,7 +11,8 @@ const mock = [
     price: 120,
     rating: 93,
     title: `Beautiful &amp; luxurious apartment at great location`,
-    type: `Apartment`
+    type: `Apartment`,
+    coordinates: [52.3909553943508, 4.85309666406198]
   },
   {
     id: 1,
@@ -20,7 +21,8 @@ const mock = [
     price: 80,
     rating: 80,
     title: `Wood and stone place`,
-    type: `Private room`
+    type: `Private room`,
+    coordinates: [52.369553943508, 4.85309666406198]
   }
 ];
 
