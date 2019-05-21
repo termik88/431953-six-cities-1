@@ -473,6 +473,11 @@ Array [
         >
           <section
             className="cities__map map"
+            style={
+              Object {
+                "height": "100vh",
+              }
+            }
           />
         </div>
       </div>

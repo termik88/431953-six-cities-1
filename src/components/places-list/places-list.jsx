@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import PlaceCard from '../place-card/place-card.jsx';
 
-class PlaceList extends PureComponent {
+export default class PlaceList extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -52,8 +52,6 @@ class PlaceList extends PureComponent {
   }
 }
 
-export default PlaceList;
-
 PlaceList.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
@@ -62,7 +60,8 @@ PlaceList.propTypes = {
     price: PropTypes.number.isRequired,
     rating: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired,
+    coordinates: PropTypes.arrayOf(PropTypes.number).isRequired
   }).isRequired
   ).isRequired
 };
