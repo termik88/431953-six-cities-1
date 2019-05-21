@@ -53,21 +53,23 @@ class PlaceMap extends PureComponent {
     // const centerCity = [this._findMedian(offers.map((offer) => offer.coordinates[0])),
     //   this._findMedian(offers.map((offer) => offer.coordinates[1]))];
 
-    const map = leaflet.map(this._mapRef.current, {
-      layers: [
-        leaflet.tileLayer(SETTINGS.layer.server, {attribution: SETTINGS.layer.attribution})
-      ],
-      center: centerCity,
-      zoom: SETTINGS.zoom,
-      zoomControl: SETTINGS.zoomControl,
-      marker: SETTINGS.marker
-    });
+    if (this._mapRef.current) {
+      const map = leaflet.map(this._mapRef.current, {
+        layers: [
+          leaflet.tileLayer(SETTINGS.layer.server, {attribution: SETTINGS.layer.attribution})
+        ],
+        center: centerCity,
+        zoom: SETTINGS.zoom,
+        zoomControl: SETTINGS.zoomControl,
+        marker: SETTINGS.marker
+      });
 
-    map.setView(centerCity, SETTINGS.zoom);
+      map.setView(centerCity, SETTINGS.zoom);
 
-    offers.forEach((offer) => {
-      leaflet.marker(offer.coordinates, {ICON}).addTo(map);
-    });
+      offers.forEach((offer) => {
+        leaflet.marker(offer.coordinates, {ICON}).addTo(map);
+      });
+    }
   }
 }
 

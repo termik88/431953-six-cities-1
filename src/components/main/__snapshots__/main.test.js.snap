@@ -380,6 +380,11 @@ exports[`Main correctly renders 1`] = `
       >
         <section
           className="cities__map map"
+          style={
+            Object {
+              "height": "100vh",
+            }
+          }
         />
       </div>
     </div>
